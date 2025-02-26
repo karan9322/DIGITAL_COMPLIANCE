@@ -1,0 +1,52 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs/
+*.log
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build files
+/dist
+/build
+/out
+
+# Editor & OS specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+/coverage
+*.lcov
+
+# Miscellaneous
+/.parcel-cache
+/.eslintcache
+/.turbo
+/public/static
+/public/*.map
+
+# MongoDB database dump
+/dump
+
+# Docker
+docker-compose.override.yml
+
+# Ignore local dependencies or configurations
+.npmrc
+.yarnrc
+.pnpm-debug.log
