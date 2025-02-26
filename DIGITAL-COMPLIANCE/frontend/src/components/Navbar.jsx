@@ -41,7 +41,7 @@ const Navbar = () => {
 
   const handleNavigation = (path) => {
     navigate(path);
-    setMenuOpen(false); // Close the mobile menu after clicking
+    setMenuOpen(false);
   };
 
   const handleNotificationClick = (notificationId) => {
