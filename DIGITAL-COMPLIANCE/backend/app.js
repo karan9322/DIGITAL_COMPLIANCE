@@ -16,7 +16,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: ["https://digital-compliance-1.onrender.com"], // Your frontend URL (e.g., localhost:3000 for development)
+  origin: ["http://localhost:5173"], // Your frontend URL (e.g., localhost:3000 for development)
   methods: "GET,POST,PUT,DELETE",
   credentials: true,
 };
