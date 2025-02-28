@@ -1,5 +1,5 @@
 const ComplianceForm = require("../models/ComplianceForm");
-const User = require("../models/user");
+const User = require("../models/User");
 
 exports.getSubjects = async (req, res) => {
   try {
