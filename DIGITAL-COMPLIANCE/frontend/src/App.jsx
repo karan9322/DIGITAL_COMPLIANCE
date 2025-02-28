@@ -9,7 +9,7 @@ const App = () => {
     <BrowserRouter>
       <AuthProvider>
         <AppRoutes />
-        {/* Toast container to display notifications */}
+
         <ToastContainer
           position="top-right"
           autoClose={3000}

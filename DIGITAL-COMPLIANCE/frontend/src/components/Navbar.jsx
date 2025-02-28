@@ -99,44 +99,6 @@ const Navbar = () => {
         </h1>
       </div>
 
-      {/* Navigation Links */}
-      <div className={`lg:flex ${menuOpen ? "block" : "hidden"} space-x-6`}>
-        <button
-          className={`px-3 py-2 rounded ${
-            location.pathname === "/dashboard" ? "bg-gray-700" : ""
-          }`}
-          onClick={() => handleNavigation("/dashboard")}
-        >
-          Dashboard
-        </button>
-        <button
-          className={`px-3 py-2 rounded ${
-            location.pathname === "/forms" ? "bg-gray-700" : ""
-          }`}
-          onClick={() => handleNavigation("/forms")}
-        >
-          Forms
-        </button>
-        <button
-          className={`px-3 py-2 rounded ${
-            location.pathname === "/settings" ? "bg-gray-700" : ""
-          }`}
-          onClick={() => handleNavigation("/settings")}
-        >
-          Settings
-        </button>
-        {user?.role === "admin" && (
-          <button
-            className={`px-3 py-2 rounded ${
-              location.pathname === "/admin" ? "bg-gray-700" : ""
-            }`}
-            onClick={() => handleNavigation("/admin")}
-          >
-            Admin Panel
-          </button>
-        )}
-      </div>
-
       {/* User and Notifications Section */}
       <div className="flex items-center space-x-4">
         {/* Notifications Icon */}

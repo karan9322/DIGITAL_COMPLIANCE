@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { toast } from "react-toastify";
 
@@ -53,7 +52,6 @@ const AppRoutes = () => {
         <>
           <Navbar />
           <div className="flex">
-            <Sidebar />
             <div className="w-full p-6">
               <Routes>
                 <Route

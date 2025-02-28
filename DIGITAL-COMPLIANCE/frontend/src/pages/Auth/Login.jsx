@@ -34,7 +34,7 @@ const Login = () => {
 
       localStorage.setItem("token", token); // Save token in localStorage
       login(userData); // Update user context
-      console.log("login", login);
+
       console.log("userData", userData);
       toast.success("Login successful!");
       navigate("/dashboards"); // Redirect to dashboards
