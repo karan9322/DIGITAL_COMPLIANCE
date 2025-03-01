@@ -15,7 +15,7 @@ export default defineConfig({
     strictPort: true,
     proxy: {
       "/api": {
-        target: backendUrl, // Use the backend URL from env or default
+        target: backendUrl, // Use the backend URL fenv or default
         changeOrigin: true,
         secure: true,
       },
