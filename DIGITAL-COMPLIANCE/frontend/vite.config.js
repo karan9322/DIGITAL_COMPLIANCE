@@ -1,6 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// Use process.env for fallback in vite.config.js
+const backendUrl =
+  process.env.VITE_BACKEND_URL || "https://digital-compliance.onrender.com";
+
+console.log("Backend URL:", backendUrl);
+
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -9,7 +15,7 @@ export default defineConfig({
     strictPort: true,
     proxy: {
       "/api": {
-        target: import.meta.env.VITE_BACKEND_URL,
+        target: backendUrl, // Use the backend URL from env or default
         changeOrigin: true,
         secure: true,
       },
@@ -17,8 +23,8 @@ export default defineConfig({
   },
   preview: {
     allowedHosts: [
-      "digital-compliance-1-6632.onrender.com", // Add your deployed domain
-      new URL(import.meta.env.VITE_BACKEND_URL).host, // Keep dynamic extraction
+      "digital-compliance-1-6632.onrender.com", // Add Render domain
+      new URL(backendUrl).host, // Extract host dynamically
     ],
   },
 });
