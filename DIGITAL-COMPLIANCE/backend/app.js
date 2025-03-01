@@ -15,13 +15,14 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: "*", // Allow requests from any origin
-  methods: "GET,POST,PUT,DELETE",
-  credentials: true,
-  allowedHeaders: "Content-Type,Authorization",
+  origin: "*", // Allow all origins
+  methods: "GET, POST, PUT, DELETE, OPTIONS", // Ensure OPTIONS is included
+  allowedHeaders: "Content-Type, Authorization",
 };
-
 app.use(cors(corsOptions));
+
+// Handle preflight requests
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 
