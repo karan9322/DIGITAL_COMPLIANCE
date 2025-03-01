@@ -15,13 +15,12 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: [
-    "https://digital-compliance.onrender.com",
-    "https://digital-compliance-1-6632.onrender.com",
-  ], // Allow both frontend URLs
+  origin: "*", // Allow requests from any origin
   methods: "GET,POST,PUT,DELETE",
   credentials: true,
+  allowedHeaders: "Content-Type,Authorization",
 };
+
 app.use(cors(corsOptions));
 
 app.use(express.json());
